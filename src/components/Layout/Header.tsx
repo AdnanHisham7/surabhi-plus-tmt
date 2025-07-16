@@ -88,7 +88,7 @@ const Header: React.FC = () => {
             <button
               onClick={() => setIsOpen(!isOpen)}
               className={`p-2 rounded-md transition-colors duration-200 ${
-                isScrolled ? "text-steel-700" : "text-white"
+                isScrolled ? "text-steel-700" : "text-steel-700"
               }`}
               aria-label="Toggle menu"
             >

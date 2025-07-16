@@ -164,7 +164,7 @@ const ProductsPage: React.FC = () => {
           <Card className="mb-12 fade-in" style={{ animationDelay: "0.3s" }}>
             <div className="flex flex-col lg:flex-row">
               {/* Image Carousel with Smooth Transition */}
-              <div className="lg:w-1/3 relative">
+              <div className="lg:w-1/3 min-h-[300px] lg:min-h-0 relative">
                 {mainProduct.images.map((image, index) => (
                   <img
                     key={index}
@@ -238,19 +238,18 @@ const ProductsPage: React.FC = () => {
           <h2 className="text-2xl font-bold text-steel-900 mt-16 mb-8 text-start">
             Other products
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
             {otherProducts.map((product) => (
               <div
                 key={product.id}
                 className="group flex flex-col items-center text-center p-4 rounded-lg bg-white shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer hover:-translate-y-1"
               >
-                <div className="relative mb-4">
+                <div className="relative aspect-square w-full">
                   <img
                     src={product.images[0]}
                     alt={product.name}
-                    className="h-36 w-36 object-cover rounded-lg shadow-sm group-hover:shadow-lg transition-shadow duration-300"
+                    className="absolute inset-0 w-full h-full object-cover rounded-lg shadow-sm group-hover:shadow-lg transition-shadow duration-300"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
                 <h4 className="text-sm font-semibold text-steel-800 mb-1 group-hover:text-steel-900 transition-colors">
                   {product.name}
