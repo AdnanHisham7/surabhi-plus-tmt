@@ -125,7 +125,7 @@ const Header: React.FC = () => {
             {/* Social Media Links */}
             <div className="flex justify-center space-x-4 mt-4">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/share/14Dkd7BSnbf/"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setIsOpen(false)}
@@ -135,17 +135,7 @@ const Header: React.FC = () => {
                 <Facebook className="h-6 w-6 text-steel-700 hover:text-[#009C49]" />
               </a>
               <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => setIsOpen(false)}
-                aria-label="Twitter"
-                title="Twitter"
-              >
-                <Twitter className="h-6 w-6 text-steel-700 hover:text-[#009C49]" />
-              </a>
-              <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/surabhiplustmt"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setIsOpen(false)}
