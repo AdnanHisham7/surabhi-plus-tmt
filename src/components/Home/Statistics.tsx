@@ -62,28 +62,28 @@ const Statistics: React.FC = () => {
       value: counters.production,
       label: 'MT Annual Production',
       suffix: '+',
-      color: 'text-blue-400'
+      color: 'text-green-600' // Replaced text-blue-400
     },
     {
       icon: Users,
       value: counters.clients,
       label: 'Satisfied Clients',
       suffix: '+',
-      color: 'text-green-400'
+      color: 'text-green-400' // Unchanged
     },
     {
       icon: Award,
       value: counters.experience,
       label: 'Years Experience',
       suffix: '+',
-      color: 'text-orange-400'
+      color: 'text-lime-400' // Replaced text-orange-400
     },
     {
       icon: Globe,
       value: counters.projects,
       label: 'Projects Completed',
       suffix: '+',
-      color: 'text-purple-400'
+      color: 'text-purple-400' // Unchanged
     }
   ];
 
@@ -97,10 +97,10 @@ const Statistics: React.FC = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-r from-blue-900 via-steel-900 to-blue-900 relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-r from-green-900 via-steel-900 to-green-900 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-600/10 to-orange-600/10" />
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-green-600/10 to-lime-600/10" /> {/* Replaced from-blue-600/10 to-orange-600/10 */}
         <div 
           className="absolute inset-0 opacity-10"
           style={{
@@ -114,7 +114,7 @@ const Statistics: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div ref={ref} className={`text-center mb-16 transition-all duration-1000 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Excellence in <span className="text-orange-400">Numbers</span>
+            Excellence in <span className="text-lime-400">Numbers</span> {/* Replaced text-orange-400 */}
           </h2>
           <p className="text-xl text-steel-300 max-w-3xl mx-auto leading-relaxed">
             Our commitment to quality and innovation has established us as a trusted leader 
@@ -132,10 +132,10 @@ const Statistics: React.FC = () => {
               style={{ transitionDelay: `${index * 200}ms` }}
             >
               <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:scale-105 transition-transform duration-300">
-                <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br ${stat.color.includes('blue') ? 'from-blue-500 to-blue-600' : 
-                  stat.color.includes('green') ? 'from-green-500 to-green-600' :
-                  stat.color.includes('orange') ? 'from-orange-500 to-orange-600' :
-                  'from-purple-500 to-purple-600'} mb-6`}>
+                <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br ${stat.color.includes('green-600') ? 'from-green-600 to-green-700' : 
+                  stat.color.includes('green-400') ? 'from-green-500 to-green-600' :
+                  stat.color.includes('lime') ? 'from-lime-400 to-lime-500' :
+                  'from-purple-500 to-purple-600'} mb-6`}> {/* Updated gradient logic */}
                   <stat.icon className="h-8 w-8 text-white" />
                 </div>
                 
@@ -170,12 +170,12 @@ const Statistics: React.FC = () => {
             </div>
             
             <div className="text-center">
-              <div className="text-3xl font-bold text-blue-400 mb-2">1,250 MT</div>
+              <div className="text-3xl font-bold text-green-600 mb-2">1,250 MT</div> {/* Replaced text-blue-400 */}
               <p className="text-steel-300">This Month</p>
             </div>
             
             <div className="text-center">
-              <div className="text-3xl font-bold text-orange-400 mb-2">98.5%</div>
+              <div className="text-3xl font-bold text-lime-400 mb-2">98.5%</div> {/* Replaced text-orange-400 */}
               <p className="text-steel-300">Quality Rate</p>
             </div>
           </div>

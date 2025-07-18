@@ -55,7 +55,7 @@ const ManufacturingProcess: React.FC = () => {
         <div ref={ref} className={`text-center mb-16 transition-all duration-1000 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Advanced Manufacturing
-            <span className="block text-orange-400">Process</span>
+            <span className="block text-[#009C49]">Process</span>
           </h2>
           <p className="text-xl text-steel-300 max-w-3xl mx-auto leading-relaxed">
             State-of-the-art production facility with cutting-edge technology ensuring 
@@ -76,7 +76,7 @@ const ManufacturingProcess: React.FC = () => {
                 {/* Content */}
                 <div className="flex-1 space-y-6">
                   <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full flex items-center justify-center text-2xl font-bold">
+                    <div className="w-12 h-12 bg-[#009C49] rounded-full flex items-center justify-center text-2xl font-bold text-white">
                       {process.step}
                     </div>
                     <h3 className="text-2xl lg:text-3xl font-bold">{process.title}</h3>
@@ -101,7 +101,7 @@ const ManufacturingProcess: React.FC = () => {
 
                 {/* Icon */}
                 <div className="flex-shrink-0">
-                  <div className="w-32 h-32 bg-gradient-to-br from-blue-600 to-blue-800 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300">
+                  <div className="w-32 h-32 bg-[#9CBC66] rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300">
                     <process.icon className="h-16 w-16 text-white" />
                   </div>
                 </div>
@@ -110,7 +110,7 @@ const ManufacturingProcess: React.FC = () => {
               {/* Connector */}
               {index < processes.length - 1 && (
                 <div className="flex justify-center mt-8">
-                  <ArrowRight className="h-8 w-8 text-orange-400 animate-bounce-soft" />
+                  <ArrowRight className="h-8 w-8 text-[#009C49] animate-bounce-soft" />
                 </div>
               )}
             </div>

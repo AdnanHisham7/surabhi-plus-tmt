@@ -132,7 +132,7 @@ const ContactPage: React.FC = () => {
         {/* Header with fade-in */}
         <div className="text-center mb-16 fade-in">
           <h1 className="text-4xl md:text-5xl font-bold text-steel-900 mb-6">
-            Get in <span className="text-orange-500">Touch</span>
+            Get in <span className="text-[#009C49]">Touch</span>
           </h1>
           <p className="text-xl text-steel-600 max-w-3xl mx-auto leading-relaxed">
             Ready to discuss your steel requirements? Our experts are here to
@@ -162,7 +162,7 @@ const ContactPage: React.FC = () => {
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-2 border border-steel-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                    className="w-full px-4 py-2 border border-steel-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
                     placeholder="Enter your full name"
                   />
                 </div>
@@ -180,7 +180,7 @@ const ContactPage: React.FC = () => {
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-2 border border-steel-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                    className="w-full px-4 py-2 border border-steel-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
                     placeholder="Enter your email"
                   />
                 </div>
@@ -201,7 +201,7 @@ const ContactPage: React.FC = () => {
                     value={formData.phone}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-2 border border-steel-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                    className="w-full px-4 py-2 border border-steel-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
                     placeholder="Enter your phone number"
                   />
                 </div>
@@ -218,7 +218,7 @@ const ContactPage: React.FC = () => {
                     name="company"
                     value={formData.company}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-2 border border-steel-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                    className="w-full px-4 py-2 border border-steel-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
                     placeholder="Enter your company name"
                   />
                 </div>
@@ -237,7 +237,7 @@ const ContactPage: React.FC = () => {
                     name="productInterest"
                     value={formData.productInterest}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-2 border border-steel-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                    className="w-full px-4 py-2 border border-steel-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
                   >
                     <option value="">Select a product</option>
                     <option value="Fe 550">Fe 550</option>
@@ -269,7 +269,7 @@ const ContactPage: React.FC = () => {
                     name="quantity"
                     value={formData.quantity}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-2 border border-steel-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                    className="w-full px-4 py-2 border border-steel-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
                   >
                     <option value="">Select quantity range</option>
                     <option value="0-10 MT">0-10 MT</option>
@@ -295,7 +295,7 @@ const ContactPage: React.FC = () => {
                   onChange={handleInputChange}
                   required
                   rows={4}
-                  className="w-full px-4 py-2 border border-steel-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent resize-none"
+                  className="w-full px-4 py-2 border border-steel-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent resize-none"
                   placeholder="Tell us about your project requirements..."
                 />
               </div>
@@ -321,7 +321,7 @@ const ContactPage: React.FC = () => {
             {offices.map((office) => (
               <Card key={office.id} hover>
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-lg flex items-center justify-center flex-shrink-0">
                     <MapPin className="h-6 w-6 text-white" />
                   </div>
                   <div className="flex-1">

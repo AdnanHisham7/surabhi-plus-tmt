@@ -82,7 +82,7 @@ const Certifications: React.FC = () => {
           }`}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-steel-900 mb-6">
-            Industry <span className="text-orange-500">Certifications</span>
+            Industry <span className="text-[#009C49]">Certifications</span>
           </h2>
           <p className="text-xl text-steel-600 max-w-3xl mx-auto leading-relaxed">
             Our commitment to excellence is validated by prestigious industry

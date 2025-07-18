@@ -10,15 +10,15 @@ import msRoundRod from "../assets/ms-round-rod.png";
 import msChannels from "../assets/ms-channels.png";
 import iBeem from "../assets/i-beem.png";
 import polishRod from "../assets/polish-rod.png";
-import msWire from "../assets/ms-wire.png";
+import msWire from "../assets/ms-wire.webp";
 import msTAngle from "../assets/ms-t-angle.png";
-import asianTmt from "../assets/asian-tmt.webp";
+import asianTmt from "../assets/asian-tmt.jpg";
 import apexTmt from "../assets/apex-tmt.png";
 import ordinaryTmt from "../assets/ordinary-tmt.png";
 import msRings from "../assets/ms-rings.webp";
-import raipur4Tmt from "../assets/raipur-4tmt.png";
+import raipur4Tmt from "../assets/raipur-4tmt.jpg";
 import fe550One from "../assets/550-1.png";
-import fe550Two from "../assets/550-2.png";
+import fe550Two from "../assets/550-2.jpg";
 import fe550Three from "../assets/550-3.png";
 
 const ProductsPage: React.FC = () => {
@@ -42,6 +42,14 @@ const ProductsPage: React.FC = () => {
       category: "Standard Grade",
       images: [fe550One, fe550Two, fe550Three],
       dataSheet: "/datasheets/fe415.pdf",
+      bundlingDetails: [
+        { diameter: "6mm", quantity: "25 pcs", weight: "60 kg" },
+        { diameter: "8mm", quantity: "10 pcs", weight: "45 kg" },
+        { diameter: "10mm", quantity: "7 pcs", weight: "48 kg" },
+        { diameter: "12mm", quantity: "5 pcs", weight: "50 kg" },
+        { diameter: "16mm", quantity: "3 pcs", weight: "54 kg" },
+        { diameter: "20mm", quantity: "2 pcs", weight: "58 kg" },
+      ],
     },
     {
       id: "2",
@@ -150,14 +158,14 @@ const ProductsPage: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header with fade-in */}
         <div className="text-center mb-12 fade-in">
-          <h1 className="text-4xl md:text-5xl font-bold text-steel-900 mb-6">
-            Our <span className="text-orange-500">Product</span> Range
+          <h1 className="text-4xl md:text-5xl font-bold text-steel- BTRFader text-steel-900 mb-6">
+            Our <span className="text-[#009C49]">Product</span> Range
           </h1>
           <p className="text-xl text-steel-600 max-w-3xl mx-auto leading-relaxed">
             Comprehensive range of TMT steel bars engineered for superior
             performance in all types of construction projects.
           </p>
-        </div>
+          </div>
 
         {/* Main Product Section with fade-in and delay */}
         {mainProduct && (
@@ -195,7 +203,7 @@ const ProductsPage: React.FC = () => {
                   Grade: {mainProduct.grade}
                 </p>
                 <div className="grid grid-cols-2 gap-4 text-sm mb-4">
-                  {Object.entries(mainProduct?.specifications).map(
+                  {Object.entries(mainProduct.specifications).map(
                     ([key, value]) => (
                       <div key={key} className="flex justify-between">
                         <span className="text-steel-600 capitalize">{key}</span>
@@ -216,6 +224,30 @@ const ProductsPage: React.FC = () => {
                       </span>
                     ))}
                   </div>
+                </div>
+                <div className="mb-4">
+                  <h4 className="font-semibold mb-1">Standard Bundling</h4>
+                  <table className="w-full border-collapse">
+                    <thead>
+                      <tr className="bg-steel-100">
+                        <th className="p-2 text-left text-steel-700">Diameter</th>
+                        <th className="p-2 text-left text-steel-700">Quantity</th>
+                        <th className="p-2 text-left text-steel-700">Weight</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {mainProduct.bundlingDetails.map((detail, index) => (
+                        <tr
+                          key={index}
+                          className={index % 2 === 0 ? "bg-steel-50" : "bg-white"}
+                        >
+                          <td className="p-2 text-steel-800">{detail.diameter}</td>
+                          <td className="p-2 text-steel-800">{detail.quantity}</td>
+                          <td className="p-2 text-steel-800">{detail.weight}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
                 </div>
                 <div className="mb-4">
                   <h4 className="font-semibold mb-1">Applications:</h4>

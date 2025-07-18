@@ -21,7 +21,7 @@ const Hero: React.FC = () => {
   return (
     <section className="relative py-20 min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-steel-900 via-blue-900 to-steel-800">
+      <div className="absolute inset-0 bg-gradient-to-br from-steel-900 via-[#009C49] to-steel-800">
         <div className="absolute inset-0 bg-black/40" />
         <div
           className="absolute inset-0 opacity-20"
@@ -46,7 +46,7 @@ const Hero: React.FC = () => {
         >
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             Building Tomorrow's
-            <span className="block bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-[#9CBC66] to-[#009C49] bg-clip-text text-transparent">
               Steel Infrastructure
             </span>
           </h1>
@@ -88,11 +88,11 @@ const Hero: React.FC = () => {
                 }`}
                 style={{ transitionDelay: `${index * 200}ms` }}
               >
-                <feature.icon className="h-8 w-8 text-orange-400 mx-auto mb-4" />
+                <feature.icon className="h-8 w-8 text-[#9CBC66] mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-white mb-2">
                   {feature.label}
                 </h3>
-                <p className="text-2xl font-bold text-orange-400">
+                <p className="text-2xl font-bold text-[#9CBC66]">
                   {feature.value}
                 </p>
               </div>

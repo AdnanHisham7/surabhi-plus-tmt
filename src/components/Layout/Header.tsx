@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { Menu, X, Factory } from "lucide-react";
-import logo from "../../assets/surabhi-logo.svg";
-import logoWithName from "../../assets/surabhi-logo-2.svg";
+import { Menu, X, Facebook, Twitter, Instagram } from "lucide-react";
+import logo from "../../assets/logo-horizontal-surabhi.svg";
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,7 +18,6 @@ const Header: React.FC = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Function to handle smooth scrolling to the top
   const handleScrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -41,17 +39,10 @@ const Header: React.FC = () => {
           {/* Logo */}
           <Link
             to="/"
-            className="flex items-center space-x-2 group"
+            className="flex items-center"
             onClick={handleScrollToTop}
           >
-            <img src={logo} alt="Surabhi Logo" className="h-8 w-8" />
-            <span
-              className={`text-xl font-bold transition-colors duration-200 ${
-                isScrolled ? "text-steel-800" : "text-steel-800"
-              }`}
-            >
-              Surabhi <span className="text-green-800">Plus</span> TMT
-            </span>
+            <img src={logo} alt="Surabhi Logo" className="h-[30px] w-auto" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -60,9 +51,9 @@ const Header: React.FC = () => {
               <Link
                 key={item.name}
                 to={item.path}
-                className={`text-sm font-medium transition-colors duration-200 hover:text-orange-500 ${
+                className={`text-sm font-medium transition-colors duration-200 hover:text-[#009C49] ${
                   location.pathname === item.path
-                    ? "text-orange-500"
+                    ? "text-[#009C49]"
                     : isScrolled
                     ? "text-steel-700"
                     : "text-steel-700"
@@ -77,7 +68,7 @@ const Header: React.FC = () => {
                 handleScrollToTop();
                 navigate("/contact");
               }}
-              className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-2 rounded-full text-sm font-medium hover:from-orange-600 hover:to-orange-700 transition-all duration-200 hover:scale-105 hover:shadow-lg"
+              className="bg-[#009C49] text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-[#007a3d] transition-all duration-200 hover:scale-105 hover:shadow-lg"
             >
               Contact Us
             </button>
@@ -112,9 +103,9 @@ const Header: React.FC = () => {
                   setIsOpen(false);
                   handleScrollToTop();
                 }}
-                className={`block py-3 text-sm font-medium transition-colors duration-200 hover:text-orange-500 ${
+                className={`block py-3 text-sm font-medium transition-colors duration-200 hover:text-[#009C49] ${
                   location.pathname === item.path
-                    ? "text-orange-500"
+                    ? "text-[#009C49]"
                     : "text-steel-700"
                 }`}
               >
@@ -127,10 +118,43 @@ const Header: React.FC = () => {
                 handleScrollToTop();
                 navigate("/contact");
               }}
-              className="w-full mt-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-3 rounded-full text-sm font-medium hover:from-orange-600 hover:to-orange-700 transition-all duration-200"
+              className="w-full mt-4 bg-[#009C49] text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-[#007a3d] transition-all duration-200"
             >
               Contact Us
             </button>
+            {/* Social Media Links */}
+            <div className="flex justify-center space-x-4 mt-4">
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsOpen(false)}
+                aria-label="Facebook"
+                title="Facebook"
+              >
+                <Facebook className="h-6 w-6 text-steel-700 hover:text-[#009C49]" />
+              </a>
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsOpen(false)}
+                aria-label="Twitter"
+                title="Twitter"
+              >
+                <Twitter className="h-6 w-6 text-steel-700 hover:text-[#009C49]" />
+              </a>
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsOpen(false)}
+                aria-label="Instagram"
+                title="Instagram"
+              >
+                <Instagram className="h-6 w-6 text-steel-700 hover:text-[#009C49]" />
+              </a>
+            </div>
           </div>
         )}
       </nav>

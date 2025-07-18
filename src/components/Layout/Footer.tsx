@@ -10,6 +10,7 @@ import {
   Linkedin,
   Instagram,
 } from "lucide-react";
+import logo from "../../assets/logo-horizontal-surabhi.svg"
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -40,13 +41,10 @@ const Footer: React.FC = () => {
           <div className="space-y-6">
             <Link
               to="/"
-              className="flex items-center space-x-2"
+              className="flex items-center"
               onClick={handleScrollToTop}
             >
-              <div className="p-2 bg-gradient-to-r from-blue-600 to-orange-500 rounded-lg">
-                <Factory className="h-6 w-6 text-white" />
-              </div>
-              <span className="text-xl font-bold">SurabhiPlusTMT</span>
+              <img src={logo} alt="Surabhi Logo" className="h-[30px] w-auto" />
             </Link>
             <p className="text-steel-300 text-sm leading-relaxed">
               Leading manufacturer of premium TMT steel bars with cutting-edge
@@ -60,7 +58,7 @@ const Footer: React.FC = () => {
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 bg-steel-800 rounded-lg hover:bg-orange-500 transition-colors duration-200"
+                  className="p-2 bg-steel-800 rounded-lg hover:bg-green-500 transition-colors duration-200"
                   aria-label={label}
                   onClick={handleScrollToTop}
                 >
@@ -78,7 +76,7 @@ const Footer: React.FC = () => {
                 <li key={item}>
                   <Link
                     to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                    className="text-steel-300 hover:text-orange-400 transition-colors duration-200 text-sm"
+                    className="text-steel-300 hover:text-green-400 transition-colors duration-200 text-sm"
                     onClick={handleScrollToTop}
                   >
                     {item}
@@ -97,7 +95,7 @@ const Footer: React.FC = () => {
                   <li key={product}>
                     <Link
                       to="/products"
-                      className="text-steel-300 hover:text-orange-400 transition-colors duration-200 text-sm"
+                      className="text-steel-300 hover:text-green-400 transition-colors duration-200 text-sm"
                       onClick={handleScrollToTop}
                     >
                       {product}
@@ -113,7 +111,7 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold mb-6">Contact Info</h3>
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
-                <MapPin className="h-5 w-5 text-orange-400 mt-0.5 flex-shrink-0" />
+                <MapPin className="h-5 w-5 text-green-400 mt-0.5 flex-shrink-0" />
                 <p className="text-steel-300 text-sm">
                   DOOR NO.17/595, B BLOCK
                   <br />
@@ -125,7 +123,7 @@ const Footer: React.FC = () => {
                 </p>
               </div>
               <div className="flex items-center space-x-3">
-                <Phone className="h-5 w-5 text-orange-400 flex-shrink-0" />
+                <Phone className="h-5 w-5 text-green-400 flex-shrink-0" />
                 <p className="text-steel-300 text-sm">
                   +91 94463 43439
                   <br />
@@ -133,7 +131,7 @@ const Footer: React.FC = () => {
                 </p>
               </div>
               <div className="flex items-center space-x-3">
-                <Mail className="h-5 w-5 text-orange-400 flex-shrink-0" />
+                <Mail className="h-5 w-5 text-green-400 flex-shrink-0" />
                 <p className="text-steel-300 text-sm">
                   surabhisteelspkd@gmail.com
                 </p>
@@ -150,7 +148,7 @@ const Footer: React.FC = () => {
             <div className="flex items-center space-x-6 text-sm">
               <a
                 href="#"
-                className="text-steel-400 hover:text-orange-400 transition-colors duration-200"
+                className="text-steel-400 hover:text-green-400 transition-colors duration-200"
                 onClick={(e) => {
                   e.preventDefault();
                   handleScrollToTop();
@@ -166,7 +164,7 @@ const Footer: React.FC = () => {
                   rel="noopener noreferrer"
                   onClick={handleScrollToTop}
                 >
-                  <span className="font-semibold text-orange-400">Noxwing</span>
+                  <span className="font-semibold text-green-400">Noxwing</span>
                 </a>
               </span> */}
             </div>

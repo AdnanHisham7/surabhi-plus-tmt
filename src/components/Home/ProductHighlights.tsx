@@ -6,7 +6,7 @@ import Button from "../UI/Button";
 import arrow1 from "../../assets/arrow5.svg";
 import { useNavigate } from "react-router-dom";
 import fe550One from "../../assets/550-1.png";
-import fe550Two from "../../assets/550-2.png";
+import fe550Two from "../../assets/550-2.jpg";
 import fe550Three from "../../assets/550-3.png";
 
 const ProductHighlights = () => {
@@ -17,7 +17,6 @@ const ProductHighlights = () => {
 
   const navigate = useNavigate();
 
-  // Function to handle smooth scrolling to the top
   const handleScrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -39,12 +38,20 @@ const ProductHighlights = () => {
       "Heavy Infrastructure Projects",
       "Bridges and Flyovers",
     ],
-    sizes: ["8mm", "10mm", "12mm", "16mm", "20mm", "25mm"],
+    sizes: ["6mm", "8mm", "10mm", "12mm", "16mm", "20mm", "25mm"],
     features: [
       "High Strength",
       "Reduced Steel Consumption",
       "Cost Efficient for Large Projects",
       "Improved Weldability",
+    ],
+    bundlingDetails: [
+      { diameter: "6mm", quantity: "25 pcs", weight: "60 kg" },
+      { diameter: "8mm", quantity: "10 pcs", weight: "45 kg" },
+      { diameter: "10mm", quantity: "7 pcs", weight: "48 kg" },
+      { diameter: "12mm", quantity: "5 pcs", weight: "50 kg" },
+      { diameter: "16mm", quantity: "3 pcs", weight: "54 kg" },
+      { diameter: "20mm", quantity: "2 pcs", weight: "58 kg" },
     ],
   };
 
@@ -56,7 +63,7 @@ const ProductHighlights = () => {
         setCurrentImageIndex(
           (prevIndex) => (prevIndex + 1) % product.images.length
         );
-      }, 3000); // Change every 3 seconds
+      }, 3000);
       return () => clearInterval(interval);
     }
   }, [product.images]);
@@ -71,7 +78,7 @@ const ProductHighlights = () => {
           }`}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-steel-900 mb-6">
-            Premium <span className="text-orange-500">TMT Steel</span> Range
+            Premium <span className="text-[#009C49]">TMT Steel</span> Range
           </h2>
           <p className="text-xl text-steel-600 max-w-3xl mx-auto leading-relaxed">
             Engineered for excellence with superior mechanical properties and
@@ -124,7 +131,7 @@ const ProductHighlights = () => {
                     ))}
                   </div>
                 )}
-                <div className="absolute top-4 right-4 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                <div className="absolute top-4 right-4 bg-[#009C49] text-white px-3 py-1 rounded-full text-sm font-semibold">
                   {product.grade}
                 </div>
               </div>
@@ -161,7 +168,7 @@ const ProductHighlights = () => {
                   {product.features.map((feature) => (
                     <span
                       key={feature}
-                      className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-medium"
+                      className="px-3 py-1 bg-[#9CBC66]/10 text-[#9CBC66] rounded-full text-xs font-medium"
                     >
                       {feature}
                     </span>
@@ -183,6 +190,33 @@ const ProductHighlights = () => {
                     </span>
                   ))}
                 </div>
+              </div>
+
+              <div className="mb-6">
+                <h4 className="font-semibold text-steel-800 mb-3">
+                  Standard Bundling
+                </h4>
+                <table className="w-full border-collapse">
+                  <thead>
+                    <tr className="bg-steel-100">
+                      <th className="p-2 text-left text-steel-700">Diameter</th>
+                      <th className="p-2 text-left text-steel-700">Quantity</th>
+                      <th className="p-2 text-left text-steel-700">Weight</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {product.bundlingDetails.map((detail, index) => (
+                      <tr
+                        key={index}
+                        className={index % 2 === 0 ? "bg-steel-50" : "bg-white"}
+                      >
+                        <td className="p-2 text-steel-800">{detail.diameter}</td>
+                        <td className="p-2 text-steel-800">{detail.quantity}</td>
+                        <td className="p-2 text-steel-800">{detail.weight}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
               </div>
 
               <div className="flex gap-2">
